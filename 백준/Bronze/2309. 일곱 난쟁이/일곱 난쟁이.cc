@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 	int n[9];
-	int sum = 0, cnt = 0;
+	int sum = 0;
 	int falsedwarf;//가짜들의 합
 	int temp,one,two;
 	for (int i = 0; i < 9; i++) {
@@ -24,7 +24,7 @@ int main() {
 
 	for (int i = 0; i < 9; i++) {
 		for (int j = i + 1; j < 9; j++) {
-			if (n[i] + n[j] == falsedwarf) {
+			if (n[i] + n[j] == falsedwarf) {//1번과 2번의 합이 가짜들의 합일때
 				one = i;
 				two = j;
 			}
