@@ -11,9 +11,9 @@ int main() {
 		cin >> pile[i];
 	}
 	int idx = p.find('*');
-	string frontp = p.substr(0, idx);
-	string backp = p.substr(idx + 1);
-	int fsize = frontp.length();//size와 length차이
+	string frontp = p.substr(0, idx);//패턴의 앞 문자열
+	string backp = p.substr(idx + 1);//뒤 문자열
+	int fsize = frontp.length();
 	int bsize = backp.length();
 
 	for (int i = 0; i < n; i++) {
