@@ -16,7 +16,7 @@ int main() {
 			cin >> name >> kind;
 			if (m.find(kind) == m.end()) {//해당값이 없으면 end
 				//m.insert({ kind, 1 });
-				m[kind] = 1;
+				m[kind] = 1;//종류와 개수저장
 			}
 			else {
 				m[kind]++; //존재하면 값 증가
