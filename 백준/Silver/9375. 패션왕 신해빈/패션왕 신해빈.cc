@@ -23,7 +23,7 @@ int main() {
 			}
 		}
 
-		for (auto k : m) {
+		for (auto k : m) {//first=key, second=value
 			result *= k.second + 1;//종류 개수에 따라
 		}
 		cout << result - 1 << endl;//아무것도 안입은 경우 제외
