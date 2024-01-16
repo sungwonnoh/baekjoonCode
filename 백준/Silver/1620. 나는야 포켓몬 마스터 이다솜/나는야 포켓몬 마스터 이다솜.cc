@@ -1,31 +1,31 @@
 #include <iostream>
-#include <unordered_map>
+#include <map>
 #include <string>
 
 using namespace std;
 
 int main() {
-	ios_base::sync_with_stdio(false);//실행속도를 높이기 위해
-	cin.tie(NULL);
-	cout.tie(NULL);
+	ios_base::sync_with_stdio(0);//실행속도를 높이기 위해
+	cin.tie(0);
+	cout.tie(0);
 
+	string pocketmon[100000], problem;
+	int pnum;
+	map<string, int>p;//<key, value>, 자동으로 오름차순 정렬
 	int n, m;
 	cin >> n >> m;
-	string pocketmon[100001], problem = "";
-	unordered_map<string, int>p;
 
-	for (int i = 1; i <= n; i++) {
+	for (int i = 0; i < n; i++) {
 		cin >> pocketmon[i];
-		p[pocketmon[i]] = i;//번호 저장
-
+		p[pocketmon[i]] = i + 1;
 	}
-	while (m--)
-	{
+	for (int j = 0; j < m; j++) {
 		cin >> problem;
-		if (isdigit(problem[0])) {//숫자여부 확인
-			cout << pocketmon[stoi(problem)] << '\n';
+		if (isdigit(problem[0])) {//숫자일때
+			pnum = stoi(problem) - 1;//문자열을 정수로 변환
+			cout << pocketmon[pnum] << '\n';//endl은 개행뿐만 아니라 내부 버퍼를 비워주는 역할이라 느림
 		}
-		else {
+		else {//문자열이면 인덱스 출력
 			cout << p[problem] << '\n';
 		}
 	}
