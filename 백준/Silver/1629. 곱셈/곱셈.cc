@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-long long int f(long long int a, long long int b, long long int c) {
+long long int f(long long int a, long long int b, long long int c) {//모듈러 연산 분배법칙
 	if (b == 0) {
 		return 1;
 	}
@@ -10,7 +10,7 @@ long long int f(long long int a, long long int b, long long int c) {
 	}
 	long long k = f(a, b / 2, c) % c;
 
-	if (b % 2 == 0) {
+	if (b % 2 == 0) {//짝수일때 곱셈공식
 		return (k * k) % c;
 	}
 	else {
