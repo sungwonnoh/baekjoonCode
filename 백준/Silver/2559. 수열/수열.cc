@@ -7,7 +7,6 @@ int main() {
 	cin >> n >> k;
 
 	vector<int> sum(n+1);
-	sum.push_back(0);
 	for (int i = 1; i <=n; i++) {
 		cin >> t;
 		sum[i] = t + sum[i - 1];
