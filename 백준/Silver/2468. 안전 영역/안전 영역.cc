@@ -5,7 +5,6 @@ using namespace std;
 int n;
 int cnt = 0, ans = 0;
 int maxH = 0;
-int minH = 0;
 int dx[4] = { 1,-1,0,0 };
 int dy[4] = { 0,0,1,-1 };
 int arr[101][101] = {};//입력받을 지역
