@@ -1,18 +1,16 @@
 #include <iostream>
 #include <algorithm>
-#include <vector>
 using namespace std;
 
 int main() {
 	int n;
-	vector<int> score;
 	cin >> n;
+	int* score = new int[n];
+	
 	for (int i = 0; i < n; i++) {
-		int a;
-		cin >> a;
-		score.push_back(a);
+		cin >> score[i];
 	}
-	sort(score.begin(), score.end());
+	sort(score, score + n);
 
 	long long sum = 0;
 
@@ -20,6 +18,7 @@ int main() {
 		sum += abs(score[i] - (i+1));
 	}
 	cout << sum;
+	delete[] score;
 
 	return 0;
 }
