@@ -1,5 +1,4 @@
 n=int(input())
-cnt=0
 dp=[0]*10000001
 for i in range(2,n+1):
     dp[i]=dp[i-1]+1
